@@ -1,0 +1,172 @@
+/* Staret variables */
+:root{
+    --main-color: #2196f3;
+    --tranparent-color:rgb(15 116 143 / 70%);
+    --second-main-color:rgb(247, 245, 245);
+    --main-transition:0.3s;
+    --padding-top:100px;
+    --padding-bottom:100px;
+    
+}
+/* End variables */
+/* Start Globale Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Cairo', sans-serif;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+/* Mobile */
+@media (min-width : 576px){
+    .container{
+        width: 520px;
+    }
+}
+/* Small screen */
+@media (min-width : 768px){
+    .container{
+        width: 750px;
+    }
+}
+/* medium screen */
+@media (min-width : 992px){
+    .container{
+        width: 970px;
+    }
+}
+/* Large screen */
+@media (min-width : 1200px){
+    .container{
+        width: 1170px;
+        
+    }
+}
+/* End Globale Rules */
+/* start Header */
+header .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: relative;
+}
+header .container .logo{
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 20px;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .man-nav{
+    display: flex;
+    
+}
+header .container .man-nav >li >a{
+    color: black;
+    padding: 0 30px;
+    transition: var(--main-transition);
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 18px;
+}
+@media (max-width:767px){
+    header .container .man-nav >li >a{
+        padding: 10px;
+        height: 40px;
+    }
+}
+header .container .man-nav >li >a:hover{
+    background-color: rgb(247, 245, 245);
+}
+header .container .man-nav >li >a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 0;
+    background-color: var(--main-color);
+    display: none;
+    animation-name:nav-antmation ;
+    animation-duration: 0.3s;
+    animation-direction: unset;
+}
+header .container .man-nav >li >a:hover::before{
+    display: block;
+}
+@keyframes nav-antmation {
+    0% {
+        width: 0%;
+        left: 0;
+    }
+    100% {
+        width: 100%;
+        left: 0;
+    }
+}
+header .container .man-nav >li >a:hover{
+    color: var(--main-color);
+}
+.megamenue{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    gap: 40px;
+    top: calc(100% + 50px);
+    border-bottom: 3px solid var(--main-color);
+    background-color: white;
+    padding: 30px;
+    
+}
+.megamenue .imges img {
+    max-width: 100%;
+    
+}
+.megamenue .links{
+    min-width: 250px;
+    flex: 1;
+}
+.megamenue .links li:not(:last-child){
+    
+    border-bottom: 1px solid #9e9e9e4d;
+}
+
+.megamenue .links li a{
+    color: var(--main-color);
+    font-weight: bold;
+    padding: 15px;
+    display: block;
+}
+.megamenue .links li a i{
+    margin-right: 10px;
+}
+/* End Header */
